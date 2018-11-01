@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Checker</string>
+    <string name="fan_open">风机开</string>
+    <string name="fan_close">风机关</string>
+    <string name="turn_right">右转</string>
+    <string name="turn_left">左转</string>
+    <string name="led">灯</string>
+    <string name="temperature">温度</string>
+    <string name="humidity">湿度</string>
+    <string name="have_potion">有药水</string>
+    <string name="no_potion">无药水</string>
+    <string name="provide_potion">供药开</string>
+    <string name="stop_potion">供药关</string>
+    <string name="rfid">rfid</string>
+</resources>

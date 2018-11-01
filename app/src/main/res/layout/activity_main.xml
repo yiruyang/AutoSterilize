@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jm.checker.MainActivity"
+    tools:layout_editor_absoluteY="73dp">
+
+
+    <Button
+        android:id="@+id/turn_left"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="145dp"
+        android:layout_marginStart="142dp"
+        android:text="@string/turn_left"
+        app:layout_constraintBottom_toBottomOf="@+id/turn_right"
+        app:layout_constraintEnd_toEndOf="@+id/turn_right"
+        app:layout_constraintStart_toStartOf="@+id/fan"
+        app:layout_constraintTop_toTopOf="@+id/turn_right"
+        android:layout_marginLeft="142dp"
+        android:layout_marginRight="145dp" />
+
+    <Button
+        android:id="@+id/turn_right"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="123dp"
+        android:layout_marginTop="123dp"
+        android:text="@string/turn_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rfid"
+        app:layout_constraintStart_toStartOf="@+id/potion"
+        app:layout_constraintTop_toTopOf="@+id/has_potion"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="43dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/temperature"
+        app:layout_constraintEnd_toStartOf="@+id/rfid"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_marginRight="29dp" />
+
+    <TextView
+        android:id="@+id/humi"
+        android:layout_width="66dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/humidity"
+        app:layout_constraintEnd_toEndOf="@+id/has_potion"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_marginRight="94dp"
+        android:layout_marginLeft="97dp" />
+
+    <TextView
+        android:id="@+id/has_potion"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:layout_marginTop="16dp"
+        android:text="药水有无"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/rfid"
+        android:layout_width="49dp"
+        android:layout_height="21dp"
+        android:text="rfid"
+        app:layout_constraintBottom_toBottomOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="@+id/potion"
+        app:layout_constraintStart_toStartOf="@+id/potion"
+        app:layout_constraintTop_toTopOf="@+id/temp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/led"
+        android:layout_width="115dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="16dp"
+        android:text="灯"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="53dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="16dp"
+        android:text="预留"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="7dp" />
+
+    <Switch
+        android:id="@+id/potion"
+        android:layout_width="184dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="29dp"
+        android:text="供药"
+        app:layout_constraintBottom_toBottomOf="@+id/fan"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/fan"
+        android:layout_marginLeft="29dp" />
+
+    <Switch
+        android:id="@+id/fan"
+        android:layout_width="184dp"
+        android:layout_height="37dp"
+        android:layout_marginBottom="64dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="64dp"
+        android:showText="true"
+        android:text="风机"
+        app:layout_constraintBottom_toBottomOf="@+id/led"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/temp"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="281dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="205dp" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+</android.support.constraint.ConstraintLayout>
